@@ -1,4 +1,4 @@
-package service.exception;
+package com.example.projectspring.exception;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package service.exception;
+package com.example.projectspring.exception;
 
 public class ObjectNotFoundException extends RuntimeException {
 

@@ -8,7 +8,7 @@ import com.example.projectspring.dto.UserDTO;
 import com.example.projectspring.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import service.exception.ObjectNotFoundException;
+import com.example.projectspring.exception.ObjectNotFoundException;
 
 @Service
 public class UserService {

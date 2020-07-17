@@ -1,4 +1,5 @@
 package com.example.projectspring.resource;
+import com.example.projectspring.domain.Post;
 import com.example.projectspring.domain.User;
 
 import java.net.URI;
@@ -14,8 +15,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 @RequestMapping(value = "/users")
-
 public class UserResource {
+
     @Autowired
     private UserService service;
 
@@ -53,4 +54,12 @@ public class UserResource {
         obj = service.update(obj);
         return ResponseEntity.noContent().build();
     }
+
+    @RequestMapping(value="/{id}/posts", method=RequestMethod.GET)
+    public ResponseEntity<List<Post>> findPosts(@PathVariable String id) {
+        User obj = service.findById(id);
+        return ResponseEntity.ok().body(obj.getPosts());
+    }
+
+
 }
